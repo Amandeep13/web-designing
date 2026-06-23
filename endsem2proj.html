@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Amazon Clone</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#eaeded;
+}
+
+
+/* Navbar */
+
+.navbar{
+    background:#131921;
+    color:white;
+    display:flex;
+    align-items:center;
+    padding:15px;
+    gap:20px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#ff9900;
+}
+
+.search{
+    flex:1;
+    display:flex;
+}
+
+.search input{
+    width:100%;
+    padding:12px;
+    border:none;
+    font-size:16px;
+}
+
+.search button{
+    background:#febd69;
+    border:none;
+    padding:12px 20px;
+    cursor:pointer;
+}
+
+.cart{
+    font-size:18px;
+}
+
+
+/* Banner */
+
+.banner{
+    background:url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d")
+    center/cover;
+    height:250px;
+    display:flex;
+    align-items:end;
+    padding:30px;
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+}
+
+
+/* Products */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:30px;
+}
+
+
+.card{
+
+    background:white;
+    padding:20px;
+    text-align:center;
+    border-radius:5px;
+}
+
+.card img{
+
+    width:150px;
+    height:150px;
+    object-fit:contain;
+
+}
+
+.card h3{
+    margin:10px;
+}
+
+
+.price{
+    color:#b12704;
+    font-size:20px;
+}
+
+
+button{
+
+    background:#ffd814;
+    border:none;
+    padding:10px 20px;
+    border-radius:20px;
+    cursor:pointer;
+
+}
+
+
+button:hover{
+
+    background:#f7ca00;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="navbar">
+
+<div class="logo">
+Amazon
+</div>
+
+
+<div class="search">
+
+<input type="text" placeholder="Search products">
+
+<button>Search</button>
+
+</div>
+
+
+<div class="cart">
+🛒 Cart : <span id="count">0</span>
+</div>
+
+
+</div>
+
+
+
+<div class="banner">
+
+Welcome to Amazon Clone
+
+</div>
+
+
+
+<section class="products">
+
+
+<div class="card">
+
+<img src="https://images.pexels.com/photos/7772548/pexels-photo-7772548.jpeg">
+
+<h3>Wireless Headphones</h3>
+
+<p class="price">₹1999</p>
+
+<button onclick="addCart()">
+Add to Cart
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="https://images.pexels.com/photos/11700618/pexels-photo-11700618.jpeg">
+
+<h3>Smart Watch</h3>
+
+<p class="price">₹2999</p>
+
+<button onclick="addCart()">
+Add to Cart
+</button>
+
+</div>
+
+
+
+
+<div class="card">
+
+<img src="https://images.pexels.com/photos/6592698/pexels-photo-6592698.jpeg">
+
+<h3>Laptop</h3>
+
+<p class="price">₹49999</p>
+
+<button onclick="addCart()">
+Add to Cart
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="https://images.pexels.com/photos/30277522/pexels-photo-30277522.jpeg">
+
+<h3>Mobile Phone</h3>
+
+<p class="price">₹15999</p>
+
+<button onclick="addCart()">
+Add to Cart
+</button>
+
+</div>
+
+
+</section>
+
+
+
+<script>
+
+
+let cart = 0;
+
+
+function addCart(){
+
+cart++;
+
+document.getElementById("count").innerHTML = cart;
+
+alert("Product added to cart");
+
+}
+
+
+</script>
+
+
+</body>
+</html>
